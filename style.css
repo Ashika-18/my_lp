@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    /*padding: 0;*/
+    padding-top: 311px;
+    background-color: #f3f2f2; /* 明るい背景色 */
+    color: #333; /* 濃いめの文字色 */
+    line-height: 1.6;
+    /* パターン */
+}
+main {
+    padding-top: 0; /* ヘッダーの高さに合わせて調整 */
+    margin-top: -311px;
+}
+
+header {
+    /* 既存のスタイル */
+    color: #333;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    position: fixed; /* 上部に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95); /* 少し透明な白 */
+    /* 背景 */
+    background-image: linear-gradient(to right, #a8dadc, #457b9d, #1d3557, #457b9d, #a8dadc);
+    background-size: 300% 100%; /* 色数が増えたので少し広めに */
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+/* header背景アニメーション */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* スクロールされたら背景色を少し濃くする */
+.scrolled-header {
+    border-bottom: 1px solid #ccc;
+    /* スクロール時も格子模様を表示 */
+    background-image: linear-gradient(to right, transparent 99%, rgba(255, 0, 0, 0.8) 100%),
+                      linear-gradient(to bottom, transparent 99%, rgba(255, 0, 0, 0.8) 100%);
+    background-size: 20px 20px; /* 格子の間隔 */
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: calc(2rem + 100px); /* headerのpaddingとmainのpaddingを考慮 */
+    padding-bottom: 2rem;
+}
+
+.py-5 {
+    padding-top: calc(3rem + 100px);
+    padding-bottom: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    padding: 0.5rem 0;
+}
+
+section strong {
+    font-weight: bold;
+    color: #007bff; /* アクセントカラー */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+footer p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    position: sticky; /* 必要に応じて */
+    bottom: 0; /* 必要に応じて */
+    width: 100%; /* 必要に応じて */
+}
