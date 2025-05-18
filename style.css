@@ -37,16 +37,6 @@ header {
     100% { background-position: 100% 50%; }
 }
 
-/* スクロールされたら背景色を少し濃くする */
-.scrolled-header {
-    border-bottom: 1px solid #ccc;
-    /* スクロール時も格子模様を表示 */
-    background-image: linear-gradient(to right, transparent 99%, rgba(255, 0, 0, 0.8) 100%),
-                      linear-gradient(to bottom, transparent 99%, rgba(255, 0, 0, 0.8) 100%);
-    background-size: 20px 20px; /* 格子の間隔 */
-}
-
-
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;

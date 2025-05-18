@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //headerアニメーション
-    const header = document.querySelector('header');
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) { // 少しスクロールしたらクラスを追加
-            header.classList.add('scrolled-header');
-        } else {
-            header.classList.remove('scrolled-header');
-        }
-    });
-    
     //navアニメーション
     const navLinks = document.querySelectorAll('a[href^="#"]');
 
